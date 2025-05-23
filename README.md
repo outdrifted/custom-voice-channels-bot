@@ -56,4 +56,4 @@ Discord temporary voice channels bot, that allows users to dynamically create an
     * Freeze process list: ``pm2 save``
 
 ## Create bot
-Coming soon.
+Follow [this](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot) tutorial to setup a bot account.
