@@ -1,14 +1,23 @@
 # Custom Voice Channels Bot
-Discord temporary voice channels bot, that allows users to dynamically create and edit their own channels. Made using the Discord.js library in Node.js.
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
-![Bot](https://i.imgur.com/Mhorgh2.gif)
+
+A Discord bot that lets users easily create, customize, and manage temporary voice channels on demand. Built with Discord.js in Node.js, it's perfect for communities that want flexible and user-controlled voice chat spaces.
+
+<p align="center">
+  <img src="https://i.imgur.com/Mhorgh2.gif" alt="Bot" />
+</p>
+
+## Features
+*  **Persistent Customization.** User-defined settings like channel names and other preferences are saved and automatically restored—even if the channel is deleted or the bot restarts.
+* **No External Database Needed.** Powered by Quick.db, the bot runs with built-in lightweight storage—no need for a separate database server.
 
 ## Prerequisites
 * [Node.js and npm](https://nodejs.org/en)
 * [git](https://git-scm.com/downloads) (or download repository manually)
 
 ## Setup guide
-### Linux:
 * Clone the repository (``git clone https://github.com/outdrifted/custom-voice-channels-bot``)
 * Navigate to the repo (``cd Elixir-Bot``)
 * Install all required NPM packages (``npm i``)
@@ -35,20 +44,20 @@ Discord temporary voice channels bot, that allows users to dynamically create an
         * `vc.category` is the category the channel specified above is in.
     * In the bot's root directory, create a `.env` file. Contents: (note: if you don't have a bot token, see the "Create bot" section to [create a bot](https://discord.com/developers/applications))
         ```
-        # Credentials
-        BOT_TOKEN=your_token
+        # Credentials (get from Discord Developers portal)
+        BOT_TOKEN=
 
-        # Bot ID
-        BOT_CLIENT_ID=811605881971671051
+        # Bot user ID
+        BOT_CLIENT_ID=
 
-        # Bot owner ID
-        OWNER_ID=243436321018871810
+        # Bot owner user ID
+        OWNER_ID=
 
         # Repeated channel creation cooldown (in seconds)
         VC_COOLDOWN=20
         ```
     * `deploy-commands.js` is used to register slash commands. The bot doesn't have any commands except for /ping, so it's not necessary to run it.
-    * Run the bot: ``node bot.js``. On sucessfull launch, you should see "Ready! Logged in as ..." in the terminal.
+    * Run the bot: ``node bot.js``. On sucessful launch, you should see "Ready! Logged in as ..." in the terminal.
 #### Optional:
 * Install pm2 (``npm install pm2@latest -g``). This package allows your bot to run on system startup and automatically restarts it if it crashes:
     * While in the bot's directory, run it with: ``pm2 start bot.js``
